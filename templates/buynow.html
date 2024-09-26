@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now - {{ recipe.title }}</title> <!-- Dynamic title based on recipe -->
+    <link rel="stylesheet" href="{% static 'css/buynow.css' %}">
+</head>
+<body>
+
+    <!-- Back Button -->
+    <button class="back-button" onclick="history.back()">
+        &#8592; Back
+    </button>
+
+    <div class="container">
+        <h2 class="cart-title">Buy Now</h2> <!-- Changed title from Cart to Buy Now -->
+
+        <div class="recipe-card">
+            <h3>{{ recipe.title }}</h3> <!-- Displaying the recipe title -->
+
+            <h4>Quantity:</h4> <!-- Quantity section -->
+            <select class="quantity-dropdown">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+            <h4>Selected Delivery Service:</h4> <!-- Section for delivery options -->
+            <div class="purchase-options">
+                <h3>Select Delivery Service</h3>
+                <div class="radio-option">
+                    <input type="radio" id="swiggy" name="delivery" value="https://swiggy.com" checked />
+                    <label for="swiggy">
+                        <img src="https://cdn.pnggallery.com/wp-content/uploads/swiggy-logo-04.png" alt="Swiggy Icon" class="service-icon" /> <!-- Replace with actual Swiggy icon URL -->
+                        Swiggy - ₹45
+                    </label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="zomato" name="delivery" value="https://zomato.com" />
+                    <label for="zomato">
+                        <img src="https://static.vecteezy.com/system/resources/previews/020/975/665/original/zomato-logo-zomato-icon-transparent-free-png.png" alt="Zomato Icon" class="service-icon" /> <!-- Replace with actual Zomato icon URL -->
+                        Zomato - ₹55
+                    </label>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn buy-button" id="proceed-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/buynow.js' %}"></script>
+</body>
+</html>

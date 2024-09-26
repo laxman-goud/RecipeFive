@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+</head>
+<body>
+
+    <!-- Back Button -->
+    <button class="back-button" onclick="history.back()">
+        &#8592; Back
+    </button>
+
+    <div class="container">
+        <h2 class="cart-title">Cart</h2>
+
+        {% for recipe in recipes %}
+        <div class="recipe-card">
+    <h3>{{ recipe.title }}</h3>
+    {% comment %} <p>{{ recipe.description }}</p> {% endcomment %}
+
+    <h4>Ingredients:</h4>
+    <ul class="ingredient-list">
+        {% for ingredient in recipe.ingredients %}
+        <li class="cart-item">
+            <input type="checkbox" class="ingredient-checkbox" />
+            <span class="ingredient-name">{{ ingredient }}</span>
+            <select class="quantity-dropdown">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <button class="remove-button">
+                <img src="https://cdn-icons-png.flaticon.com/512/1345/1345823.png" alt="Bin Icon" class="bin-icon" />
+            </button>
+        </li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+
+
+        <div class="purchase-options">
+            <h3>Select Delivery Service</h3>
+            <div class="radio-option">
+                <input type="radio" id="blinkit" name="delivery" value="https://blinkit.com" checked />
+                <label for="blinkit">
+                    <img src="https://play-lh.googleusercontent.com/e1Zn87SwPBW6N3LDPT40ZiZgCoKMsOx-BoMVP94P1arEHXDt8B4f16-nwa3fezZB6Go" alt="Blinkit Icon" class="service-icon" />
+                    Blinkit - <span class="price" data-price="50">₹490</span>
+                </label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="zepto" name="delivery" value="https://zepto.com" />
+                <label for="zepto">
+                    <img src="https://image.winudf.com/v2/image1/Y29tLnplcHRvY29uc3VtZXJhcHBfaWNvbl8xNjY2OTIxNjc5XzA1OA/icon.png?w=340&fakeurl=1" alt="Zepto Icon" class="service-icon" />
+                    Zepto - <span class="price" data-price="45">₹455</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button class="btn buy-button" id="proceed-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="{% static 'js/cart.js' %}"></script>
+</body>
+</html>
