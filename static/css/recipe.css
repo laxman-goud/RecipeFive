@@ -1,0 +1,125 @@
+.back-button {
+
+    margin-top: 84px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgb(255, 134, 72);
+}
+
+
+.card {
+    border: none; /* Remove default border */
+    border-radius: 19px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    transition: transform 0.3s; /* Smooth transform on hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.card-title {
+    font-size: 1.8rem; /* Larger title font */
+    font-weight: 600; /* Semi-bold font weight */
+    margin-bottom: 15px; /* Space below title */
+    color: #333; /* Dark color for contrast */
+    text-align: center; /* Center align title */
+    text-transform: uppercase; /* Uppercase title */
+}
+
+.embed-responsive {
+    border-radius: 10px; /* Rounded corners for the video */
+    overflow: hidden; /* Hide overflow */
+}
+
+.recipe-info {
+    display: flex; /* Create a flexbox layout */
+    justify-content: space-between; /* Space out items */
+    margin: 20px; /* Add margin for spacing */
+}
+
+.ingredients-list, .nutritional-facts {
+    background-color: #f9f9f9; /* Slightly off-white background */
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1; /* Allow both sections to grow equally */
+    margin: 0 10px; /* Space between sections */
+    border: 1px solid #e0e0e0; /* Light border for definition */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.ingredients-list h5, .nutritional-facts h5 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.ingredients-list ul, .nutritional-facts ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.ingredients-list li, .nutritional-facts li {
+    margin: 10px 0; /* Add space between items */
+    display: flex;
+    align-items: center; /* Align icon and text */
+}
+
+.ingredients-list li i {
+    color: #28a745; /* Green color for icons */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.button-group {
+    display: flex; /* Use flexbox for button alignment */
+    justify-content: center; /* Center the buttons */
+    margin-top: 20px; /* Space above the buttons */
+}
+
+.btn {
+    padding: 12px 25px; /* Add padding for buttons */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    color: white; /* Button text color */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth background color change */
+    margin: 0 10px; /* Add horizontal spacing between buttons */
+    font-size: 1rem; /* Font size for buttons */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.buy-now {
+    background-color: #28a745; /* Green background for Buy Now */
+}
+
+.mart {
+    background-color: #007bff; /* Blue background for Mart */
+}
+
+.btn:hover {
+    opacity: 0.8; /* Change opacity on hover for feedback */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .recipe-info {
+        flex-direction: column; /* Stack ingredients and nutritional facts */
+    }
+
+    .ingredients-list, .nutritional-facts {
+        margin: 10px 0; /* Adjust margin for stacked layout */
+    }
+}

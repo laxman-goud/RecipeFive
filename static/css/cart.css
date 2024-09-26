@@ -1,0 +1,190 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: rgb(30, 33, 34);
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(255, 134, 72); /* Add solid border with green color */
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    border-color: #56c9a3; /* Change border color on hover */
+}
+
+
+/* Title Styles */
+.cart-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #4a4a4a;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Ingredients Heading */
+.ingredients-heading {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #4a4a4a;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Cart Item Styles */
+.cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eaeaea;
+    transition: background 0.3s;
+}
+
+.cart-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.ingredient-name {
+    flex: 1;
+    font-weight: bold;
+    color: #555;
+    margin-left: 10px;
+}
+
+.ingredient-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #28a745; /* Change the checkbox color */
+}
+
+/* Ingredient Image Styles */
+.ingredient-image {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Quantity Dropdown Styles */
+.quantity-dropdown {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* Remove Button Styles */
+.remove-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* Styles for the bin icon */
+.remove-button .bin-icon {
+    filter: brightness(0) invert(1); /* This will make the icon white */
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    color: white;
+}
+
+/* Optional: Add hover effect for the remove button */
+.remove-button:hover .bin-icon {
+    opacity: 0.7; /* Slightly fade on hover */
+}
+
+
+/* Purchase Options Styles */
+.purchase-options {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e7f1ff;
+    border-radius: 8px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.radio-option:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+.service-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Button Group Styles */
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Checkout Button Styles */
+.btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: rgb(255, 134, 72);
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #56c9a3, #28a745);
+}
+
+
+.back-button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgb(255, 134, 72);
+}
